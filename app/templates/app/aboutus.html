@@ -1,0 +1,146 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+    <div class="aboutus">
+        <div class="about-con">
+            <div class="container-sec-1">
+                {% for aboutsec_1 in aboutsec_1 %}
+                <h1>{{aboutsec_1.title}}
+                  <span>{{aboutsec_1.subtitle}}</span>   
+                </h1>
+                    <p class="about-p">
+                        {{aboutsec_1.description}}
+                    </p>
+                    <p class="about-p-2">
+                        {{aboutsec_1.subdescription}}
+                    </p>
+                            <br />
+                           <a href="" class="about-btn">{{aboutsec_1.btn}} <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                           <br />
+                        
+            </div>
+            <div class="container-sec-1">
+                <img src="{{aboutsec_1.img.url}}" alt="" class="about-img">
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+    <div class="about-con-2">
+        <div class="container-2-sec-1">
+            <img src="{% static 'app/img/photo-1548140385-6bbbb4824faf.jpg' %}" alt="" class="about-img">
+        </div>
+        <div class="container-2-sec-1">
+            <div>
+                 <br />
+            <h1 class="text-center">My Skills</h1>
+             <br />
+             <br />
+                <div class="skill-bar">
+                   <p>SEO</p> 
+                    <div class="progress-bar-seo"></div>
+                    <span class="percentage-seo">80%</span>
+                    <br />
+                </div>
+                <div class="skill-bar">
+                    <p>Web Desgin</p> 
+                     <div class="progress-bar-webdesign"></div>
+                     <span class="percentage-webdesign">75%</span>
+                     <br />
+                 </div>
+                 <div class="skill-bar">
+                    <p>Animations</p> 
+                     <div class="progress-bar-animations"></div>
+                     <span class="percentage-animations">85%</span>
+                     <br />
+                 </div>
+                 <div class="skill-bar">
+                    <p>Graphics Desgining</p> 
+                     <div class="progress-bar-graphicsdesgining"></div>
+                     <span class="percentage-graphicsdesgining">90%</span>
+                     <br />
+                 </div>
+                 <div class="skill-bar">
+                     <p>Digital Marketing</p> 
+                      <div class="progress-bar-digital-marketing"></div>
+                      <span class="percentage-digital-marketing">70%</span>
+                      <br />
+                  </div>
+                  <div class="skill-bar">
+                     <p>Social Media Marketing</p> 
+                      <div class="progress-bar-SocialMedia"></div>
+                      <span class="percentage-SocialMedia">80%</span>
+                      <br />
+                  </div>
+                  <div class="skill-bar">
+                    <p>Email Marketing</p> 
+                     <div class="progress-bar-EmailMarketing"></div>
+                     <span class="percentage-EmailMarketing">80%</span>
+                     <br />
+                 </div>
+                 <div class="skill-bar">
+                     <p>ADs Management</p> 
+                      <div class="progress-bar-ADsManagement"></div>
+                      <span class="percentage-ADsManagement">70%</span>
+                      <br />
+                  </div>
+                  <div class="skill-bar">
+                     <p>Web Developement</p> 
+                      <div class="progress-bar-WebDevelopement"></div>
+                      <span class="percentage-WebDevelopement">90%</span>
+                      <br />
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="whychooseme">
+        <h1 class="text-center">Why Choose Me?</h1>
+        <div class="whyMe-con">
+            <div class="whyMesec-1">
+              <p class="text-center"><ion-icon name="videocam-outline"></ion-icon></p>  
+                <h3>LIGHT COMPOSURE</h3>
+                <p>The world without photography will 
+                    be meaningless to us if there is no light.
+                </p>
+            </div>
+            <div class="whyMesec-1">
+                <p class="text-center"><ion-icon name="podium-outline"></ion-icon></p> 
+                <h3>PROFESSIONAL SKILLS</h3>
+                <p>The world without photography will 
+                    be meaningless to us if there is no light.
+                </p>
+            </div>
+            <div class="whyMesec-1">
+              <p class="text-center"><ion-icon name="cog-outline"></ion-icon></p>  
+                <h3>PERFECT EQUIPMENT</h3>
+                <p>The world without photography will 
+                    be meaningless to us if there is no light.
+                </p>
+            </div>
+            <div class="whyMesec-1">
+              <p class="text-center"><ion-icon name="cellular-outline"></ion-icon></p>  
+                <h3>ULTRA HD</h3>
+             <p>The world without photography will 
+                    be meaningless to us if there is no light.
+                </p>
+            </div>
+            <div class="whyMesec-1">
+              <p class="text-center"><ion-icon name="eye-outline"></ion-icon></p>  
+                <h3>UNIC VISION</h3>
+                <p>The world without photography will 
+                    be meaningless to us if there is no light.
+                </p>
+            </div>
+            <div class="whyMesec-1">
+              <p class="text-center"> <ion-icon name="aperture-outline"></ion-icon></p> 
+                <h3>FOCUSING KNOWLEDGES</h3>
+                <p>The world without photography will 
+                    be meaningless to us if there is no light.
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock main-content %}
+
+    

@@ -1,0 +1,143 @@
+{% load static %}
+<nav id="navbar">
+    <div class="left-nav">
+        <ion-icon name="menu-outline" id="left-menu-icon" onclick="sliderNav()"></ion-icon>
+        {% for logo in navlogo %}
+          <span class="left-menu-logo">{{logo.navlogo}}</span> 
+        {% endfor %}
+    </div>
+   
+    <ul id="rightnavitems" style="left:-100%;">
+        {%  for navitem_1 in navitem_1 %}
+        <li><a href="/">{{navitem_1.navitem_1}}</a></li>
+        {% endfor %}
+        {%  for navitem_2 in navitem_2 %}
+        <li><a href="{% url 'aboutus' %}">{{navitem_2.navitem_2}}</a></li>
+        {% endfor %}
+        {%  for navitem_3 in navitem_3 %}
+        <li><a href="#">{{navitem_3.navitem_3}}</a></li>
+        {% endfor %}
+        {%  for navitem_4 in navitem_4 %}
+            <li><a href="#">{{navitem_4.navitem_4}}</a></li>
+        {% endfor %}
+    
+         {%  for navitem_5 in navitem_5 %}
+        <li><a href="#" class="subitems"  onclick="servicesItem()">{{navitem_5.navitem_5}}</a>
+
+            <div class="drop-menu" id="servicessubitems">
+                <ul>
+
+                   <li  id="dropclose" onclick="dropclose()"><ion-icon name="close-outline"></ion-icon></li> 
+                    {% for navsubitem_1 in navsubitem_1 %}
+                        <li><a href="#">{{navsubitem_1.navsubitem_1}}</a></li>
+                    {% endfor %}
+                    {% for navsubitem_2 in navsubitem_2 %}
+                        <li><a href="#">{{navsubitem_2.navsubitem_2}}</a></li>
+                     {% endfor %}
+                    {% for navsubitem_3 in navsubitem_3 %}
+                        <li><a href="#">{{navsubitem_3.navsubitem_3}}</a></li>
+                    {% endfor %}
+                    {% for navsubitem_4 in navsubitem_4 %}
+                        <li><a href="#">{{navsubitem_4.navsubitem_4}}</a></li>
+                    {% endfor %}
+                    {% for navsubitem_5 in navsubitem_5 %}
+                        <li><a href="#">{{navsubitem_5.navsubitem_5}}</a></li>
+                    {% endfor %}
+                    {% for navsubitem_6 in navsubitem_6 %}
+                        <li class="nav-lastitem"><a href="#">{{navsubitem_6.navsubitem_6}}</a></li>
+                    {% endfor %}
+                   
+                </ul>
+            </div>
+            
+        </li>
+        {% endfor %}
+         {% for navitem_6 in navitem_6 %}
+            <li>
+                <a href="#">{{navitem_6.navitem_6}}</a>
+            </li>
+        {% endfor %} 
+    </ul>
+    <div class="nav-icon">
+        <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+        <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+        <div class="hamburgermenu" onclick="rightNav(this)">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+        </div>
+    </div>
+</nav>
+<header>
+    <div class="progress-bar" id="mybar"></div>
+</header>
+<!-- === back to top btn === -->
+<div class="back-to-top" id="mybtn">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</div>
+<!-- <button >Dark</button> -->
+<div class="dark-light">
+    <p id="light">Light
+        <ion-icon name="sunny-outline"></ion-icon>
+    </p>
+    <p id="dark">Dark
+        <ion-icon name="moon-outline"></ion-icon>
+    </p>
+</div>
+
+ 
+    
+<div class="social-icons">
+
+    <a href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+        Instagram
+    </a> 
+    <a href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+    </a> 
+</div>
+
+<div id="left-slide-menu">
+    <ion-icon name="close-outline" id="closeicon" onclick="closeLeftNav()"></ion-icon>
+        <div class="left-menu-content">
+            {% for leftMenu in leftMenu %}
+                <h1 class="left-menu-name">{{leftMenu.title}}</h1>
+                <p class="line-height-1 mt-4">{{leftMenu.descriptions}}</p>
+            {% endfor %}
+            
+                <div class="position-relative">
+                    {% for latesttitle in latesttitle %}
+                        <h1 class="text-center mb-2 latest-photos">{{latesttitle.title}}</h1>
+                    {% endfor %}
+                </div>
+                <div class="left-menu-con">
+                    {% for lastestpicture in lastestpicture %}
+                    <div class="menu-con-sec1">
+                            <img src="{{lastestpicture.latestImg}}" alt="" style="width: 100px; height:100px;"  class="left-menu-img">
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+                <div class="left-menu-contact">
+                    {% for leftcontact in leftcontact %}
+                        <h1 class="text-center">{{leftcontact.title}}</h1>
+                        <a href="https:/wa.me/923161541560" class="mt-2">
+                            <ion-icon name="logo-whatsapp" class="whatsapp"></ion-icon>
+                            <p>{{leftcontact.phone}}</p>
+                        </a> 
+                        <a href="mailto:faizan480khan@gmail.com">
+                            <ion-icon name="mail-outline" class="email"></ion-icon>
+                        <p> {{leftcontact.email}}</p> 
+                        </a>
+                        <p class="left-copyright">{{leftcontact.copyRight}}</p>
+                    {% endfor %}
+                </div>
+        </div>        
+</div>
+
+<!-- === back to top btn End  === -->
+
+
+<!-- === navbar End === -->

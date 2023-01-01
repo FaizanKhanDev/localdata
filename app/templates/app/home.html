@@ -1,0 +1,231 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block about %}
+
+{% endblock about %}
+{% block main-content %}
+
+  <!-- === home Background-slider ===  -->
+ 
+        <div class="slideshow">
+           
+      
+            <div class="holder">
+                {% for homebg in homeBg %}
+                    <section class="slide-1" style="background-image: url({{homebg.homebg}});">
+                        <div class="slider-1-content">
+                            <div class="slider-1-con-sec-1">
+                                <h1 class="hometitle">{{homebg.bgtitle}}  </h1>
+                                <a href="#"><button class="btn home-btn">{{homebg.homebtn}}</button></a>
+                            </div>
+                        </div>
+                    </section>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="next-prev">
+            <ion-icon name="chevron-back-outline" class="prev"></ion-icon></a>
+            <ion-icon name="chevron-forward-outline" class="next"></ion-icon>
+        </div>
+
+  <!-- === home Background-slider ===  -->
+  <!-- === logo Background-slider ===  -->
+         
+    <div class="logo-slider">
+        <div class="brand-carousel section-padding owl-carousel">
+            {% for clientlogo in clientlogo %}
+
+                <div class="single-logo" style="width: 100px;">
+                <img src="{{clientlogo.img}}" alt="" style="width: 200px; height: 120px;  position: relative;
+                left: 50px;">
+                </div>
+            {% endfor %}
+
+         
+          </div>
+
+  <!-- === logo Background-slider ===  -->
+
+           <br /><br /> <br /><br />
+          <div class="whatwedo-line">
+                <div class="whatswedo">
+                    <p class="round mr-2"></p>
+                    {% for whatwedo in whatwedo %}
+                    <p> {{whatwedo.title}}</p>
+                    {% endfor %}
+                    <p class="round round-2 ml-2"></p>
+                </div>
+          </div>
+          <br /><br /> <br />
+          <div class="services">
+            {% for servicetitleSub in servicetitleSub %}
+                    <h1 class="text-center word-1">
+                        {{servicetitleSub.title}} 
+                        <span>{{servicetitleSub.subtitle}}</span> 
+                        {{servicetitleSub.subtitle1}}</h1>
+                {% endfor %}
+                <h1 class="text-center word"></h1>
+                <div class="services-con">
+                    {% for seo in seo %}
+                        <div class="services-1">
+                            <p class="text-center"><ion-icon name="rocket-outline"></ion-icon></p> 
+                            <p class="text-center mt-4 seo absolute">{{seo.title}}</p>
+                            <p class="text-center mt-2 absolute management">{{seo.description}}</p>
+                        </div>
+                    {% endfor %}
+                    {% for WebDesign in WebDesign %}
+                        <div class="services-1">
+                            <p class="text-center"><ion-icon name="receipt-outline"></ion-icon></p> 
+                            <p class="text-center mt-4 seo absolute">
+                                {{WebDesign.title}}
+                            </p>
+                            <p class="text-center mt-2 absolute management">
+                                {{WebDesign.description}}</p>
+                        </div>
+                    {% endfor %}
+                    {% for SocialMediaMarketing in SocialMediaMarketing %}
+                        <div class="services-1">
+                            <p class="text-center">
+                                <ion-icon name="globe-outline"></ion-icon>
+                            </p> 
+                            <p class="text-center mt-4 seo absolute">
+                                {{SocialMediaMarketing.title}}
+                            </p>
+                            <p class="text-center mt-2 absolute management">
+                                {{SocialMediaMarketing.description}}</p>
+                        </div>
+                    {% endfor %}
+                    {% for WebDevelopment in WebDevelopment %}
+                        <div class="services-1">
+                            <p class="text-center"><ion-icon name="desktop-outline"></ion-icon></p> 
+                            <p class="text-center mt-4 seo absolute">{{WebDevelopment.title}}</p>
+                            <p class="text-center mt-2 absolute management">
+                                {{WebDevelopment.description}}
+                            </p>
+                        </div>
+                    {% endfor %}
+                    {% for EmailMarketing in EmailMarketing %}
+                        <div class="services-1">
+                            <p class="text-center">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </p> 
+                            <p class="text-center mt-4 seo absolute">{{EmailMarketing.title}}</p>
+                            <p class="text-center mt-2 absolute management">
+                                {{EmailMarketing.description}}
+                            </p>
+                        </div>
+                    {% endfor %}
+                    {% for ADsManagement in ADsManagement %}
+                    <div class="services-1">
+                            <p class="text-center"><ion-icon name="cog-outline"></ion-icon></p> 
+                            <p class="text-center mt-4 seo absolute">{{ADsManagement.title}}</p>
+                            <p class="text-center mt-2 absolute management">{{ADsManagement.description}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <br>
+                <p class="text-center mt-4"><a href="" class="btn">learn More</a></p>
+                <br>
+          </div>
+          {% for creative in creative %}
+          <div class="creative-studio">
+
+            <div class="studio-sec-1">
+                <h1>{{creative.title1}} <br />
+                    <span>{{creative.title2}}</span>  
+                </h1>
+                <p>
+                    {{creative.description1}}
+                </p>
+                <p>          
+                    {{creative.description2}}
+                </p>
+                <a href="">{{creative.btn}} <ion-icon name="chevron-forward-outline"></ion-icon></a>
+             
+
+            </div>
+            <div class="studio-sec-1">
+                <img src="{{creative.img}}" alt="">
+            </div>
+          </div>
+          {% endfor %}
+          <br />
+    </div> 
+     <br />
+     {% for gallery in gallery %}
+        <h1 class="text-center gallery-head">{{gallery.title}}</h1>
+    {% endfor %}
+    <br />
+    <div class="row"> 
+        <div class="column">
+            {% for galleryColumn1image in galleryColumn1image %}
+                <img src="{{galleryColumn1image.img}}" style="width:100%">
+            {% endfor %}
+        </div>
+        <div class="column">
+            {% for galleryColumn2image in galleryColumn2image %}
+                <img src="{{galleryColumn2image.img}}" style="width:100%">
+            {% endfor %}
+        </div>  
+        <div class="column">
+            {% for galleryColumn3image in galleryColumn3image %}
+                <img src="{{galleryColumn3image.img}}" style="width:100%">
+            {% endfor %}
+        </div>
+        <div class="column">
+            {% for galleryColumn4image in galleryColumn4image %}
+                 <img src="{{galleryColumn4image.img}}" style="width:100%">
+            {% endfor %}
+        </div>
+      </div>
+    
+    <div class="contactform">
+         <br />
+         {% for contactus in contactus %}
+        <h1 class="text-center contactheading">{{contactus.maintitle}}</h1>
+        <div class="contact-con">
+                <div class="contact-sec-1">
+                    <div class="contact-sub-sec">
+                        <h1 class="text-center mt-4">{{contactus.title1}} <span style="color: #fff;">{{contactus.title2}}</span> </h1>
+                        <p class="text-center mt-4">
+                           <a href=""><ion-icon name="logo-whatsapp" class="whatsapp"></ion-icon> {{contactus.phoneNumber}}</a> <br />
+                           <a href=""><ion-icon name="mail-outline" class="email"></ion-icon>{{contactus.Email}}</a> <br />
+                        </p>     
+                            <p class="text-center">
+                                <a href=""><ion-icon name="logo-facebook" class="facebook"></ion-icon></a>
+                               <a href=""><ion-icon name="logo-instagram" class="instagram"></ion-icon></a>
+                           </p>   
+                           </div>
+                    </div>
+                  
+                <div class="contact-sec-2">
+                    <form action="" method="post">
+                       
+                        {% csrf_token %}
+                            {% for fm in form %}
+                                {{fm.label_tag}}  <br /> {{fm}} <br />  
+                              <small>{{fm.errors|striptags}}</small>
+                            
+
+                            {% endfor %}
+                            <input type="submit" value="Submit">
+                           
+
+                           
+                    </form>
+                </div>
+        </div>
+        {% endfor %}
+        
+        <br /><br />
+        </div>
+        
+
+
+
+
+
+       
+    
+
+{% endblock main-content %}

@@ -1,0 +1,81 @@
+
+<!-- Footer -->
+<div class="footer-socialicons">
+  <a href=""><ion-icon name="logo-facebook" class="facebook-footer"></ion-icon> Facebook</a>
+  <a href=""><ion-icon name="logo-twitter" class="twitter"></ion-icon> Twitter</a>
+  <a href=""><ion-icon name="logo-instagram" class="instagram-footer"> </ion-icon>Instagram</a>
+</div>
+<footer id="footer" class="section footer">
+    
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          {% for footerColumn1 in footerColumn1 %}
+              <h3>{{footerColumn1.title}}</h3>
+              <a href="#">{{footerColumn1.item1}}</a>
+              <a href="#">{{footerColumn1.item2}}</a>
+              <a href="#">{{footerColumn1.item3}}</a>
+              <a href="#">{{footerColumn1.item4}}</a>
+              <a href="#">{{footerColumn1.item5}}</a>
+          {% endfor %}
+        </div>
+        <div class="footer-center">
+          {% for footerColumn2 in footerColumn2 %}
+              <h3>{{footerColumn2.title}}</h3>
+              <a href="#">{{footerColumn2.item1}}</a>
+              <a href="#">{{footerColumn2.item2}}</a>
+              <a href="#">{{footerColumn2.item3}}</a>
+              <a href="#">{{footerColumn2.item4}}</a>
+              <a href="#">{{footerColumn2.item5}}</a>
+          {% endfor %}
+        </div>
+        <div class="footer-center">
+          {% for footerColumn3 in footerColumn3 %}
+            <h3>{{footerColumn3.title}}</h3>
+            <a href="#">{{footerColumn3.item1}}</a>
+            <a href="#">{{footerColumn3.item2}}</a>
+            <a href="#">{{footerColumn3.item3}}</a>
+            <a href="#">{{footerColumn3.item4}}</a>
+            <a href="#">{{footerColumn3.item5}}</a>
+          {% endfor %}
+        </div>
+        <div class="footer-center">
+          {% for footerColumn4 in footerColumn4 %}
+          <h3>{{footerColumn4.title}}</h3>
+          <div>
+            <span>
+             <a href=""  style="display: inline-flex;"><ion-icon name="location-outline"></ion-icon></a>   
+            </span>
+            {{footerColumn4.item1}}
+          </div>
+          <div>
+            <span>
+              <a href=""  style="display: inline-flex;"> <ion-icon name="mail-outline"></ion-icon></a> 
+            </span>
+             {{footerColumn4.item2}}
+          </div>
+          <div>
+            <span>
+              <a href="" style="display: inline-flex;"><ion-icon name="logo-whatsapp" class="whatsapp"></ion-icon></a>  
+            </span>
+            {{footerColumn4.item3}}
+          </div>
+          <div>
+            
+          <a href="">{{footerColumn4.item4}}</a>  
+          </div>
+          {% endfor %}
+          <!-- <div class="payment-methods">
+            <img src="./images/payment.png" alt="">
+          </div> -->
+        </div>
+      </div>
+    </div>
+    </div>
+    <div style="display: flex; height: 50px; align-items: center; justify-content: center; position: relative; top: 120px;">
+        <p class="text-center copyright" style="font-size: 15px;">© Promo-themes, 2021. All Rights Reserved</p>
+    </div>
+    
+
+  </footer>
+  <!-- End Footer -->

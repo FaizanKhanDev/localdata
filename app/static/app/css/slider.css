@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --mybtn: #c99a67;
+  /* --text-w: #fff; */
+}
+html {
+  font-size: 20px;
+}
+body {
+    overflow-x: hidden;
+  }
+
+  .slideshow {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .holder {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10000vw;
+    height: 100vh;
+    transition: left 1s;
+  }
+
+
+  .slide-1,
+  .slide-2,
+  .slide-2,
+  .slide-3,
+  .slide-4 {
+    float: left;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 30px;
+  }
+
+  
+
+
+  .steps {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .next-prev {
+    float: right;
+    margin-top: -60px;
+    color: var(--text-w);
+    margin-right: 40px;
+  }
+
+  .prev {
+      border: 2px solid var(--mybtn);
+      padding: 5px;
+      cursor: pointer;
+
+  }
+
+  .next {
+    border: 2px solid var(--mybtn);
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+
+
+  }
+.slider-1-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+}
+.slider-1-con-sec-1 {
+  align-self: center;
+}
+.slider-1-con-sec-1 h1,a {
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+.slider-1-con-sec-1 {
+  font-size: 2.5rem;
+  color: var(--text-w);
+
+}
+.logo-slider {
+  margin-top: -27px;
+}
+.hometitle {
+  color: #fff;
+}
+.home-btn {
+  color: #fff;
+
+}
+.prev, 
+.next  {
+  color: #fff;
+}
